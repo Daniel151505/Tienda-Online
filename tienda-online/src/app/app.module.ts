@@ -9,6 +9,7 @@ import { ExponentialPipe } from './pipes/exponential.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductsComponent } from './components/products/products.component';
     ExponentialPipe,
     HighlightDirective,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
