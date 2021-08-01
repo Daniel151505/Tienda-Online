@@ -2,6 +2,10 @@
 <input type="text" [(ngModel)]="title" >
 {{title}}
 
+<!-- Utiizando nuestra pipe exponential -->
+<input type="text" [(ngModel)]="power" >
+{{power | exponential}}
+
 <!-- ngIf -->
 <div *ngIf="title === 'nicolas'">
   Esto es una prueba tu puedes

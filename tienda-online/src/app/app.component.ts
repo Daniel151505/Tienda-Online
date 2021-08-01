@@ -11,6 +11,8 @@ export class AppComponent {
 
   items = ['nicolas', 'luciana', 'sonia']
 
+  power = 10
+
   // No se pueden iterar array
   objeto = {};
 
