@@ -54,14 +54,10 @@
   </li>
 </ul>
 
-<!-- Llamando al componente product -->
-
-<app-product></app-product>
-
 <!-- ngFor recorriendo objetos -->
 
 <div *ngFor="let product of products">
-  {{product.title}}
-  <img [src]=" product.image " alt="">
-  {{product.price}}
+  <!-- Enviando datos a product  [product]="product" -->
+  <!-- Revibiendo datos (productClicked)="clickProduct($event)" -->
+  <app-product (productClicked)="clickProduct($event)" [product]="product" ></app-product>
 </div>

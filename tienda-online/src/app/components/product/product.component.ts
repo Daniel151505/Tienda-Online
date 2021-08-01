@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from 'src/app/product.model';
+
+
 
 @Component({
   selector: 'app-product',
@@ -8,19 +10,24 @@ import { Product } from 'src/app/product.model';
 })
 export class ProductComponent implements OnInit {
 
-  product: Product =
-    {
-      id: '1',
-      image: 'assets/images/camiseta.png',
-      title: 'Camiseta',
-      price: 80000,
-      description: 'bla bla bla bla bla'
-    }
-  ;
+  // Input
+ @Input() product!: Product;
+
+ // Output
+ @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  // Agregar Carrito
+
+  addCart(){
+    console.log('añadir al carrito')
+
+    // Emitiendo id al componente app
+    this.productClicked.emit(this.product.id)
   }
 
 }
