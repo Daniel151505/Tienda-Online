@@ -6,3 +6,22 @@
 <div *ngIf="title === 'nicolas'">
   Esto es una prueba tu puedes
 </div>
+
+
+
+<!-- ngFor -->
+
+<button (click)="addItem()" >Agregar item</button>
+
+<ul >
+  <!-- ngIf -->
+  <li *ngIf="items.length == 0">La lista esta vacia</li>
+
+  <!-- ngFor -->
+  <li *ngFor="let item of items; let i=index">
+    {{item}} {{i}}
+    <button (click)="deleteItem(i)"> Eliminar Item </button>
+  </li>
+</ul>
+
+
