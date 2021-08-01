@@ -23,6 +23,8 @@ export class ProductComponent implements OnInit {
  // Output
  @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
+today = new Date();
+
  // Constructor
   constructor() {
     console.log('1. constructor');

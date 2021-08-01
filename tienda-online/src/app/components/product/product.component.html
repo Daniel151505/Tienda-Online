@@ -1,4 +1,13 @@
-<h3> {{product.title}} </h3>
+<!-- Pipe de Mayusculas -->
+<h3> {{product.title | uppercase}}</h3>
 <img [src]="product.image" alt="">
-<strong> {{product.price}} </strong>
+
+<!-- Pipe de divisa -->
+<strong> {{product.price | currency}} </strong>
+
+<!-- Pipe de acortador de texto -->
+<p> {{product.description | slice:0:10}} </p>
+
+<!-- Pipe de fecha -->
+<p> {{today | date: 'HH:mm'}} </p>
 <button (click)="addCart()" >Agregar al carrito</button>
