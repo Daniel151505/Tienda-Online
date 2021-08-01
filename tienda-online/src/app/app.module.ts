@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { ExponentialPipe } from './pipes/exponential.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     ExponentialPipe,
-    HighlightDirective
+    HighlightDirective,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
