@@ -56,8 +56,13 @@
 
 <!-- ngFor recorriendo objetos -->
 
-<div *ngFor="let product of products">
+<div>
   <!-- Enviando datos a product  [product]="product" -->
   <!-- Revibiendo datos (productClicked)="clickProduct($event)" -->
-  <app-product (productClicked)="clickProduct($event)" [product]="product" ></app-product>
+<div  class="product-grid">
+  <app-product
+  *ngFor="let product of products"
+  (productClicked)="clickProduct($event)"
+  [product]="product">
+  </app-product>
 </div>
