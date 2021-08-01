@@ -1,1 +1,10 @@
-<p>products works!</p>
+<!-- ngFor recorriendo objetos -->
+  <!-- Enviando datos a product  [product]="product" -->
+  <!-- Revibiendo datos (productClicked)="clickProduct($event)" -->
+  <div  class="product-grid">
+    <app-product
+    *ngFor="let product of products"
+    (productClicked)="clickProduct($event)"
+    [product]="product">
+    </app-product>
+  </div>
