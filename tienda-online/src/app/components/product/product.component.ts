@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+   Component,
+   EventEmitter,
+   Input,
+   OnInit,
+   Output,
+   SimpleChanges
+   } from '@angular/core';
 import { Product } from 'src/app/product.model';
 
 
@@ -16,9 +23,33 @@ export class ProductComponent implements OnInit {
  // Output
  @Output() productClicked: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+ // Constructor
+  constructor() {
+    console.log('1. constructor');
+  }
 
+  // ngOnCange
+  ngOnChanges(changes: SimpleChanges){
+    console.log('2. ngOnChanges')
+    console.log(changes)
+  }
+
+
+  // ngOnInit
   ngOnInit(): void {
+    console.log('3. ngOnInit')
+  }
+
+
+  // ngDoCheck
+  ngDoCheck(): void {
+    console.log('4. ngDoCheck')
+  }
+
+
+  // ngOnDestroy
+  ngOnDestroy(): void {
+    console.log('5. ngOnDestroy')
   }
 
   // Agregar Carrito
