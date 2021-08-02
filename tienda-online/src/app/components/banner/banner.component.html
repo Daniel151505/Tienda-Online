@@ -1,1 +1,12 @@
-<p>banner works!</p>
+<div class="container">
+
+  <!-- Banner usando Swiper
+
+  ngFor iteración -->
+
+  <swiper class="mySwiper">
+    <ng-template swiperSlide *ngFor="let img of images; index as i">
+      <img [src]="img" alt="Imagen de banner {{ i }}">
+    </ng-template>
+  </swiper>
+</div>
