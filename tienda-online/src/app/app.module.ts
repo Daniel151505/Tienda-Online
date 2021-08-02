@@ -14,6 +14,7 @@ import { DemoComponent } from './components/demo/demo.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BannerComponent } from './components/banner/banner.component';
     DemoComponent,
     HeaderComponent,
     FooterComponent,
-    BannerComponent
+    BannerComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
