@@ -4,6 +4,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { DemoComponent } from './components/demo/demo.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductsComponent } from './components/products/products.component';
 
 // Creando rutas en Angular
@@ -23,6 +24,11 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent
+  },
+  //Redireccionamiento a producto de acuerdo al id
+  {
+    path: 'products/:id',
+    component: ProductDetailComponent
   },
   {
     path : 'contact',
