@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
+import { SwiperModule } from "swiper/angular";
 import { AppComponent } from './app.component';
 import { ProductComponent } from './components/product/product.component';
 import { ExponentialPipe } from './pipes/exponential.pipe';
@@ -32,7 +32,8 @@ import { BannerComponent } from './components/banner/banner.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
