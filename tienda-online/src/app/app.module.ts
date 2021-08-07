@@ -34,8 +34,7 @@ import { LayoutComponent } from './components/layout/layout.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    SwiperModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
