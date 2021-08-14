@@ -16,7 +16,6 @@ const routes: Routes = [
     component: ProductDetailComponent
   },
 ];
-angular material
 
 @NgModule({
   // forChild rutas hijas
