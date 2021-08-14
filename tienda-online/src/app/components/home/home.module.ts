@@ -6,6 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { BannerComponent } from './components/banner/banner.component';
 import { HomeComponent } from './components/home/home.component';
 import { SwiperModule } from 'swiper/angular';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SwiperModule } from 'swiper/angular';
     // Necesario Importar
     CommonModule,
     HomeRoutingModule,
-    SwiperModule
+    SwiperModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: []

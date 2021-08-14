@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './components/contact/contact.component';
+import { ContactComponent } from './components/contact/components/contact/contact.component';
+
 import { DemoComponent } from './components/demo/demo.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ProductsComponent } from './components/products/products.component';
+
+
+
 
 // Creando rutas en Angular
 
@@ -29,7 +32,7 @@ const routes: Routes = [
       },
       {
         path: 'products',
-        component: ProductsComponent
+        loadChildren: () => import('./components/product/product.module').then(m => m.ProductModule)
       },
       //Redireccionamiento a producto de acuerdo al id
       {
@@ -38,22 +41,14 @@ const routes: Routes = [
       },
       {
         path : 'contact',
-        component: ContactComponent
+        loadChildren: () => import ('./components/contact/contact.module').then(c => c.ContactModule)
       }
     ]
-  },
-  {
-    path: 'products',
-    component: ProductsComponent
   },
   //Redireccionamiento a producto de acuerdo al id
   {
     path: 'products/:id',
     component: ProductDetailComponent
-  },
-  {
-    path : 'contact',
-    component: ContactComponent
   },
   {
     path: 'demo',
