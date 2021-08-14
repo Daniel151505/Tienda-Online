@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './components/contact/components/contact/contact.component';
-
-import { DemoComponent } from './components/demo/demo.component';
+import { AdminGuard } from './admin.guard';
 import { LayoutComponent } from './components/layout/layout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-
 
 
 
@@ -28,31 +24,25 @@ const routes: Routes = [
       // Importa el home.module y lee todo lo que esta
       {
         path: 'home',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
       },
       {
         path: 'products',
+        canActivate: [AdminGuard],
         loadChildren: () => import('./components/product/product.module').then(m => m.ProductModule)
       },
-      //Redireccionamiento a producto de acuerdo al id
       {
-        path: 'products/:id',
-        component: ProductDetailComponent
+        path : 'demo',
+        canActivate: [AdminGuard],
+        loadChildren: () => import ('./components/demo/demo.module').then(c => c.DemoModule)
       },
       {
         path : 'contact',
+        canActivate: [AdminGuard],
         loadChildren: () => import ('./components/contact/contact.module').then(c => c.ContactModule)
       }
     ]
-  },
-  //Redireccionamiento a producto de acuerdo al id
-  {
-    path: 'products/:id',
-    component: ProductDetailComponent
-  },
-  {
-    path: 'demo',
-    component: DemoComponent
   },
 
   // Redireccionamiento cuando la ruta esta mal
