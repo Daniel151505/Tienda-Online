@@ -7,12 +7,26 @@ body {
 .product-grid {
   display: grid !important;
   grid-template-columns: repeat(4,1fr) !important;
+  grid-gap: 50px 20px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 // Estilos para otras resoluciones
 @media(min-width: 576px){
   .product-grid {
     grid-template-columns: repeat(3,1fr);
+  }
+  .container {
+    max-width:1110px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 }
 // Importando Estilos de Swipper
