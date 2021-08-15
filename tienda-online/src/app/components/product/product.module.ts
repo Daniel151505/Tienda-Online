@@ -6,18 +6,22 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductComponent } from './product/product.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductRoutingModule } from './product-routing.module';
+import { MaterialModule } from 'src/app/material/material.module';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
   declarations: [
     ProductComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailComponent
   ],
   imports: [
     // Necesario Importar
     CommonModule,
     ProductRoutingModule,
-    SharedModule
+    SharedModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: []
