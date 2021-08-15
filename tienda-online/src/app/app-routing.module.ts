@@ -44,6 +44,10 @@ const routes: Routes = [
       }
     ]
   },
+  {
+    path: 'admin',
+    loadChildren: () => import ('./admin/admin.module').then(c => c.AdminModule)
+  },
 
   // Redireccionamiento cuando la ruta esta mal
   {
