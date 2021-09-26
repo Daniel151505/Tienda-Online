@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 import { Product } from '../../../product.model';
 
@@ -12,16 +13,16 @@ export class ProductsService {
     private http: HttpClient
     ) { }
 
-  // Retorna el objeto Producto
-  getAllProducts() {
-    return this.http.get<Product[]>('https://platzi-store.herokuapp.com/products')
-  }
+    getAllProducts() {
+      return this.http.get<Product[]>(`${environment.url_api}/products`);
+    }
 
-  // Retorna el item (producto) de acuerdo al id
+    getProduct(id: string) {
+      return this.http.get<Product>(`${environment.url_api}/products/${id}`);
+    }
 
-  getProduct(id:string) {
-    return this.http.get<Product[]>(`http://platzi-store.herokuapp.com/products/${id}`);
-  }
-
+    createProduct(product: Product) {
+      return this.http.post(`${environment.url_api}/products`, product);
+    }
 
 }
