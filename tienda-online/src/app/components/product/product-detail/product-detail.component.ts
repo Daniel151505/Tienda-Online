@@ -46,4 +46,15 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
+  updateProduct() {
+    const updateProduct:Partial<Product> = {
+      price: 900000,
+      description: 'Producto actualizado matrix'
+    };
+    this.productsService.updateProduct('2', updateProduct)
+    .subscribe(product => {
+      console.log(product);
+    });
+  }
+
 }
