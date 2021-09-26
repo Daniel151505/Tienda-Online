@@ -20,27 +20,16 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { ProductsListComponent } from './components/products-list/products-list.component';
 
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DashboardComponent],
+  declarations: [ProductFormComponent, NavComponent, TableComponent, DashboardComponent, ProductsListComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     ReactiveFormsModule,
-    MaterialModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatGridListModule,
-    MatCardModule,
-    MatMenuModule
+    MaterialModule
   ]
 })
 export class AdminModule { }
